@@ -20,7 +20,3 @@ def is_allowed(target_url, user_agent='*'):
     return robot_parser.can_fetch(user_agent, target_url)
 
 
-if __name__ == '__main__':
-    prepare('https://www.apress.com/robots.txt')
-    print(is_allowed('https://www.apress.com/covers/'))
-    print(is_allowed('https://www.apress.com/gp/python'))

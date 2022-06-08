@@ -1,4 +1,6 @@
+# this class extract all the links on an url
 from urllib.request import urlopen
+from urllib.parse import urljoin
 import re
 
 
@@ -16,4 +18,4 @@ if __name__ == '__main__':
     apress = download_page(target_url)
     links = extract_links(apress)
     for link in links:
-        print(link)
+        print(urljoin(target_url, link))
